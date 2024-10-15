@@ -19,5 +19,12 @@
         "province": "San José",
         "id": "155839726405",
         "typeId": "DIMEX"
+    },
+    {
+        "name": "Joseph Avilez",
+        "age": "19",
+        "province": "Alajuela",
+        "id": "119240937",
+        "typeId": "Nacional"
     }
 ]

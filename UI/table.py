@@ -1,8 +1,9 @@
 from tkinter import ttk, messagebox
+
 from utils.persons import default as persons
+from events.setDataEntry import default as setDataEntry
 
-
-def default(window: ttk):
+def default(window: ttk, datas: list):
     table = ttk.Treeview(window, columns=("Cédula", "Tipo", "Nombre", "Edad", "Provincia"), show="headings")
 
     table.heading("Cédula", text="Cédula")
@@ -17,7 +18,8 @@ def default(window: ttk):
     table.column("Edad", width=30)
     table.column("Provincia", width=100)
 
-    table.bind("<Double-1>", lambda e: messagebox.showinfo("Información", table.item(table.selection())['values']))
+
+    table.bind("<Double-1>", lambda e: setDataEntry(datas[0], datas[1], datas[2], datas[3], datas[4], table))
 
     # Leer los datos desde el archivo JSON y llenar la tabla
     init = persons()

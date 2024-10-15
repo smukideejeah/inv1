@@ -1,6 +1,6 @@
 from tkinter import ttk, messagebox
 from utils.person import Person
-def default(name: str, age: int, province: str, id: str, typeId: str, table: ttk.Treeview):
+def default(name: str, age: int, province: str, id: str, typeId: str, table: ttk.Treeview, datas: list):
     person = Person(name, age, province, id, typeId)
     append = person.upsert()
 
@@ -16,3 +16,9 @@ def default(name: str, age: int, province: str, id: str, typeId: str, table: ttk
                 break
 
         messagebox.showinfo("Éxito", "Datos actualizados correctamente.")
+
+    datas[0].delete(0, "end")
+    datas[1].set("")
+    datas[2].delete(0, "end")
+    datas[3].delete(0, "end")
+    datas[4].set("")

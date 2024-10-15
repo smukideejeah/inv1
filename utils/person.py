@@ -48,9 +48,6 @@ class Person:
         if(len(new) == 0):
             return False
         
-        for car in self.cars:
-            car.delete()
-        
         personsData.remove(new[0])
 
         with open(ROUTEPERSON, "w", encoding="utf8") as file:

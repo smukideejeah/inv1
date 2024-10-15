@@ -14,7 +14,7 @@ def createForm():
 
     initMenu(window)
 
-    table = initTable(window)
+
 
     frameTable = tk.Frame(window)
     frameTable.pack(pady=10)
@@ -24,7 +24,7 @@ def createForm():
     id.grid(row=0, column=1, padx=5, pady=5)
 
     tk.Label(frameTable, text="Tipo").grid(row=1, column=0, padx=5, pady=5)
-    typeId = tk.Entry(frameTable)
+    typeId = ttk.Combobox(frameTable, values=["Nacional", "DIMEX", "Pasaporte"], state="readonly")	
     typeId.grid(row=1, column=1, padx=5, pady=5)
 
     tk.Label(frameTable, text="Nombre").grid(row=2, column=0, padx=5, pady=5)
@@ -40,7 +40,6 @@ def createForm():
     province.grid(row=4, column=1, padx=5, pady=5)
 
 
-
     # Crear un Frame para los botones
     frameButtons = tk.Frame(window)
     frameButtons.pack(pady=10)
@@ -49,7 +48,7 @@ def createForm():
     add = tk.Button(
         frameButtons,
         text="Agregar",
-        command=lambda: addPerson(name.get(), age.get(), province.get(), id.get(), typeId.get(), table)
+        command=lambda: addPerson(name.get(), age.get(), province.get(), id.get(), typeId.get(), table, [id, typeId, name, age, province])
     )
     add.pack(side=tk.LEFT, padx=5)
 
@@ -59,5 +58,8 @@ def createForm():
         command=lambda: rmPerson(table)
     )
     _del.pack(side=tk.LEFT, padx=5)  
+
+    table = initTable(window, [id, typeId, name, age, province])
+
 
     window.mainloop()
