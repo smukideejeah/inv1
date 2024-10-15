@@ -1,0 +1,23 @@
+[
+    {
+        "name": "Rafael Argüello",
+        "age": "27",
+        "province": "San José",
+        "id": "155827841231",
+        "typeId": "DIMEX"
+    },
+    {
+        "name": "Victoria Argüello",
+        "age": "2",
+        "province": "San José",
+        "id": "123970513",
+        "typeId": "Nacional"
+    },
+    {
+        "name": "Sandra Sandoval",
+        "age": "32",
+        "province": "San José",
+        "id": "155839726405",
+        "typeId": "DIMEX"
+    }
+]
