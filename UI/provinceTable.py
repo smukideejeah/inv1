@@ -1,3 +1,13 @@
+#Programa: Imvestigación de la librería tkinter
+#archivo : provinceTable.py
+#Grupo: 1
+#Autores: Elmer Montoya, Elvis Aguilar, Rafael Argüello, Joseph Avilez
+#Fecha de Modificación: 18/10/2024
+#Versión de Python: 3.12
+#IDE Usada: Visual Studio Code
+#Ejecución: python main.py
+#Propósito: Crear tabla con los registros de una provincia
+#Descripción del Programa: Este programa es un formulario que permite al usuario ingresar datos personales para ser almacenados en un archivo json.
 from tkinter import ttk, messagebox
 from typing import List
 from utils.findByProvince import default as findByProvince

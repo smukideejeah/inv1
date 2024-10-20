@@ -1,3 +1,13 @@
+#Programa: Imvestigación de la librería tkinter
+#archivo: setDataEntry.py
+#Grupo: 1
+#Autores: Elmer Montoya, Elvis Aguilar, Rafael Argüello, Joseph Avilez
+#Fecha de Modificación: 18/10/2024
+#Versión de Python: 3.12
+#IDE Usada: Visual Studio Code
+#Ejecución: python main.py
+#Propósito: Establecer los valores de una persona en el formulario para editar
+#Descripción del Programa: Este programa es un formulario que permite al usuario ingresar datos personales para ser almacenados en un archivo json.
 from tkinter import ttk, Entry
 
 def default(id: Entry, typeId: ttk.Combobox, name: Entry, age: Entry, province: ttk.Combobox, table: ttk.Treeview):
